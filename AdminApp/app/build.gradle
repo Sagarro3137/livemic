@@ -27,8 +27,8 @@ repositories {
 }
 
 dependencies {
-    // WebRTC লাইব্রেরি (সর্বশেষ stable ভার্সন ব্যবহার করুন)
-    implementation 'org.webrtc:google-webrtc:1.0.32010'
+    // Stable WebRTC version
+    implementation 'org.webrtc:google-webrtc:1.0.30039'
 
     // Socket.IO client
     implementation ('io.socket:socket.io-client:2.1.0') {
