@@ -17,25 +17,18 @@ jobs:
           distribution: 'temurin'
           java-version: 17
 
-      - name: Prepare Gradle Wrapper (AdminApp)
-        run: |
-          cd AdminApp
-          gradle wrapper
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
 
       - name: Build Admin App
         run: |
           cd AdminApp
-          ./gradlew assembleDebug
-
-      - name: Prepare Gradle Wrapper (UserApp)
-        run: |
-          cd UserApp
-          gradle wrapper
+          ./gradlew assembleDebug --stacktrace
 
       - name: Build User App
         run: |
           cd UserApp
-          ./gradlew assembleDebug
+          ./gradlew assembleDebug --stacktrace
 
       - name: Upload APKs
         uses: actions/upload-artifact@v4
