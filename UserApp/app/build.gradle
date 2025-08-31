@@ -30,7 +30,7 @@ dependencies {
     // Stable WebRTC library
     implementation 'org.webrtc:google-webrtc:1.0.30039'
 
-    // Socket.IO client (org.json বাদ দিয়ে)
+    // Socket.IO client (exclude org.json)
     implementation ('io.socket:socket.io-client:2.1.0') {
         exclude group: 'org.json', module: 'json'
     }
