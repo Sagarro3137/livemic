@@ -20,7 +20,16 @@ android {
     }
 }
 
+repositories {
+    google()
+    mavenCentral()
+    maven { url "https://maven.google.com" }
+}
+
 dependencies {
-    implementation 'org.webrtc:google-webrtc:1.0.32006'
-    implementation 'io.socket:socket.io-client:2.1.0'
+    implementation 'org.webrtc:google-webrtc:1.0.32010'
+
+    implementation ('io.socket:socket.io-client:2.1.0') {
+        exclude group: 'org.json', module: 'json'
+    }
 }
